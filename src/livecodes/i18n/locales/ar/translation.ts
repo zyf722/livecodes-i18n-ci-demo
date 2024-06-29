@@ -10,8 +10,8 @@ const translation: I18nTranslation = {
       license: '',
     },
     livecodes: {
-      para1: '',
-      para2: '',
+      paraOne: '',
+      paraTwo: '',
     },
     version: {
       app: '',
@@ -359,6 +359,7 @@ const translation: I18nTranslation = {
       failedToReadFile: '',
     },
     loading: '',
+    loadingMessage: 'تحميل ...',
     more: '',
     optional: '',
     required: '',
