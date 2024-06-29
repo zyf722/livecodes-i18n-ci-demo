@@ -388,7 +388,7 @@ const languageInfo: I18nLangInfoTranslation = {
     desc1: '',
     desc2: '',
     link: '',
-    name: '',
+    name: 'WebAssembly 文本格式',
   },
 };
 
