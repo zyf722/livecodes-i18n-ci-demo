@@ -17,9 +17,9 @@ const translation = {
       license: 'License',
     },
     livecodes: {
-      para1:
+      paraOne:
         '<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code. ',
-      para2:
+      paraTwo:
         'A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots. ',
     },
     version: {
@@ -368,6 +368,7 @@ const translation = {
       failedToReadFile: 'Error: Failed to read file',
     },
     loading: 'Loading...',
+    loadingMessage: 'Loading ...',
     more: 'More...',
     optional: 'Optional',
     required: 'Required',

@@ -1,5 +1,5 @@
 export const loadingMessage = (
-  message = window.deps.translateString('generic.loading', 'Loading...'),
+  message = window.deps.translateString('generic.loadingMessage', 'Loading ...'),
 ) => {
   const loadingDiv = document.createElement('div');
   loadingDiv.innerHTML = message;
