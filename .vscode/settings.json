@@ -16,9 +16,11 @@
     "Modules",
     "Deploy",
     "Import",
+    "i18n",
     "ToolsPane",
     "Modes",
     "Import-maps",
     "Formatter"
-  ]
+  ],
+  "html.customData": ["./.vscode/html.html-data.json"]
 }

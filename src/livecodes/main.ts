@@ -149,7 +149,9 @@ export const livecodes = (container: string, config: Partial<Config> = {}): Prom
 
           addEventListener(
             'message',
-            async (e: MessageEventInit<{ method: keyof API; id: string; args: any }>) => {
+            async (
+              e: MessageEventInit<{ method: keyof API; id: string; args: any; payload?: any }>,
+            ) => {
               if (isEmbed) {
                 if (e.source !== parent) return;
                 const { method, id, args } = e.data ?? {};
@@ -181,6 +183,12 @@ export const livecodes = (container: string, config: Partial<Config> = {}): Prom
                 if (e.source !== iframe.contentWindow) return;
                 if (e.data?.args === 'home') {
                   location.href = location.origin + location.pathname;
+                } else if (e.data?.args === 'i18n') {
+                  // flatten i18n object `splash` and save to localStorage
+                  const i18nSplashData = e.data.payload as { [k: string]: string };
+                  for (const [key, value] of Object.entries(i18nSplashData)) {
+                    localStorage.setItem(`i18n_splash.${key}`, value);
+                  }
                 }
               }
             },

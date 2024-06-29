@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-internal-modules
+import { dispatchTranslationEvent } from './i18n/utils';
+
 interface ModalOptions {
   size?: 'large' | 'small';
   closeButton?: boolean;
@@ -26,6 +29,7 @@ export const createModal = () => {
     modal.innerHTML = '';
     modal.className = size;
     modal.appendChild(container);
+    dispatchTranslationEvent(modal);
     onCloseFn = onClose;
 
     if (scrollToSelector) {

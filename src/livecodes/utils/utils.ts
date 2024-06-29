@@ -442,3 +442,11 @@ export const bypassAMD = /* @__PURE__ */ async <T = any>(fn: () => Promise<T>): 
   (globalThis as any).define = define;
   return result;
 };
+
+export const predefinedValues = {
+  APP_VERSION: process.env.VERSION || '',
+  SDK_VERSION: process.env.SDK_VERSION || '',
+  COMMIT_SHA: process.env.GIT_COMMIT || '',
+  REPO_URL: process.env.REPO_URL || '',
+  DOCS_BASE_URL: process.env.DOCS_BASE_URL || '',
+} as const satisfies Record<string, string>;
